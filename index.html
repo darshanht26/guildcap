@@ -44,8 +44,8 @@
             </a>
             <button
               id="menu-toggle"
+              class="p-0 m-0 w-12 lg:w-24 h-8 lg:h-14 stroke-secondarylight hover:stroke-white"
               aria-label="Menu toggle"
-              class="p-0 m-0 w-12 lg:w-24 h-8 lg:h-14"
             >
               <svg
                 class="menu-toggle-open w-full h-full"
@@ -53,9 +53,9 @@
                 viewBox="0 0 96 54"
                 fill="none"
               >
-                <path d="M2 9H93.5" stroke="#C7CDFF" stroke-width="4" />
-                <path d="M2 27H93.5" stroke="#C7CDFF" stroke-width="4" />
-                <path d="M2 45H93.5" stroke="#C7CDFF" stroke-width="4" />
+                <path d="M2 9H93.5" stroke-width="4" />
+                <path d="M2 27H93.5" stroke-width="4" />
+                <path d="M2 45H93.5" stroke-width="4" />
               </svg>
               <svg
                 class="menu-toggle-close w-full h-full hidden"
@@ -65,16 +65,8 @@
                 viewBox="0 0 96 54"
                 fill="none"
               >
-                <path
-                  d="M24.0553 3L71.1106 50.0553"
-                  stroke="#C7CDFF"
-                  stroke-width="4"
-                />
-                <path
-                  d="M24.0553 50.2734L71.1106 3.21814"
-                  stroke="#C7CDFF"
-                  stroke-width="4"
-                />
+                <path d="M24.0553 3L71.1106 50.0553" stroke-width="4" />
+                <path d="M24.0553 50.2734L71.1106 3.21814" stroke-width="4" />
               </svg>
             </button>
           </div>
@@ -102,7 +94,7 @@
             class="lg:w-3/5 h-full flex flex-col lg:mt-auto lg:justify-end border-l border-l-white/15"
           >
             <ul
-              class="primary-nav-list [&_li]:text-4.7xl lg:[&_li]:text-6.2xl font-adonis [&_li]:px-8 [&_li]:py-5 lg:[&_li]:px-12 lg:[&_li]:py-8 [&_li]:border-t [&_li]:border-t-white/15"
+              class="primary-nav-list [&_li_a]:text-4.7xl lg:[&_li_a]:text-6.2xl font-adonis [&_li]:px-8 [&_li]:py-5 lg:[&_li]:px-12 lg:[&_li]:py-8 [&_li]:border-t [&_li]:border-t-white/15 hover:[&_li_a]:text-secondarydark"
             >
               <li>
                 <a
@@ -402,7 +394,7 @@
       <!-- Section 4 : Teams-->
       <section class="lg:mt-16 lg:px-0">
         <div
-          class="team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-t-0 lg:border-y-[0.3px] border-y-white"
+          class="us-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-t-0 lg:border-y-[0.3px] border-y-white"
         >
           <div
             class="lg:col-span-5 xl:row-span-3 xl:col-auto py-12 lg:pl-11 lg:pr-8 lg:py-20 xl:py-24"
@@ -744,7 +736,7 @@
         </div>
 
         <div
-          class="team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-y-[0.3px] lg:border-t-0 border-white"
+          class="india-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-y-[0.3px] lg:border-t-0 border-white"
         >
           <div
             class="lg:col-span-5 xl:row-span-3 xl:col-auto py-12 lg:pl-11 lg:pr-8 lg:py-20 xl:py-24"
@@ -1036,43 +1028,39 @@
           <div class="h1 mb-9 lg:mb-12">Contact Us</div>
           <div class="flex gap-2 items-end justify-center">
             <svg
-              class="w-7 h-7 lg:w-8 lg:h-8"
+              class="w-7 h-7 lg:w-8 lg:h-8 fill-secondarydark"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 31 31"
               fill="none"
             >
               <path
                 d="M25.594 7.42529L15.7911 13.7323L5.9881 7.42529L5.9881 4.90246L15.7911 11.2095L25.594 4.90246M25.594 2.37964L5.9881 2.37964C4.62793 2.37964 3.53735 3.5023 3.53735 4.90246L3.53735 20.0394C3.53735 20.7085 3.79556 21.3502 4.25516 21.8233C4.71476 22.2964 5.33812 22.5622 5.9881 22.5622L25.594 22.5622C26.244 22.5622 26.8674 22.2964 27.327 21.8233C27.7866 21.3502 28.0448 20.7085 28.0448 20.0394L28.0448 4.90246C28.0448 4.23337 27.7866 3.59168 27.327 3.11856C26.8674 2.64544 26.244 2.37964 25.594 2.37964Z"
-                fill="#9F90B6"
               />
             </svg>
             <a
-              class="text-2.5xl lg:text-3.2xl leading-none underline underline-offset-4 text-secondarylight"
+              class="flex gap-1 items-center text-2.5xl lg:text-3.2xl leading-none underline underline-offset-4 text-secondarydark stroke-secondarydark hover:stroke-white"
               href="mailto:"
             >
-              <span class="flex gap-1 items-center">
-                Email
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="17"
-                  height="17"
-                  viewBox="0 0 17 17"
-                  fill="none"
-                >
-                  <path
-                    d="M1.11052 16.1336L15.54 1.7041M15.54 1.7041H0.483154M15.54 1.7041V16.761"
-                    stroke="#9F90B6"
-                    stroke-width="2.25853"
-                  />
-                </svg>
-              </span>
+              Email
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+              >
+                <path
+                  d="M1.11052 16.1336L15.54 1.7041M15.54 1.7041H0.483154M15.54 1.7041V16.761"
+                  stroke-width="2.25853"
+                />
+              </svg>
             </a>
           </div>
         </div>
 
         <div class="flex flex-row justify-center lg:justify-between gap-16">
           <ul
-            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarylight/60 [&_li]:text-center lg:[&_li]:text-left"
+            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarydark/60 [&_li]:text-center lg:[&_li]:text-left"
           >
             <li>Los Angeles</li>
             <li>New York</li>
@@ -1080,7 +1068,7 @@
           </ul>
 
           <ul
-            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarylight/60 [&_li]:text-center lg:[&_li]:text-left"
+            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarydark/60 [&_li]:text-center lg:[&_li]:text-left"
           >
             <li>London</li>
             <li>Mumbai</li>

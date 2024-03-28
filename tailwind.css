@@ -41,6 +41,10 @@
   .h4 {
     @apply text-2.5xl lg:text-3.2xl;
   }
+
+  a:hover {
+    @apply text-white;
+  }
 }
 
 @layer components {
@@ -73,7 +77,7 @@
   }
 
   body:is(.body-menu-open) {
-    @apply overflow-hidden;
+    @apply overflow-hidden xl:pr-5;
   }
 
   body:is(.body-menu-open) .site-header-inner {
@@ -124,7 +128,7 @@
   }
 
   .team-card-bg {
-    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-primary lg:absolute lg:inset-0 lg:transition-all lg:ease-in-out lg:duration-700;
+    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-primary lg:absolute lg:inset-0 lg:transition-colors lg:ease-in-out lg:duration-500;
   }
 
   .team-card-icon {
@@ -152,11 +156,11 @@
   }
 
   .team-card-inner {
-    @apply px-5 py-8 lg:px-7 lg:pb-8 lg:pt-0 lg:absolute lg:inset-0 w-full lg:translate-y-44 2xl:translate-y-[23.1vh] lg:transition-all lg:ease-in-out lg:duration-700;
+    @apply px-5 py-8 lg:px-7 lg:pb-8 lg:pt-0 lg:absolute lg:inset-0 w-full lg:translate-y-44 2xl:translate-y-[23.1vh] lg:transition-transform lg:ease-in-out lg:duration-500;
   }
 
   .team-card-letter {
-    @apply absolute -z-1 top-0 lg:top-[1vh] right-[3vh] lg:right-[6vh] text-[186px] lg:text-[23vh] leading-none uppercase font-adonis font-extralight text-white/5 opacity-0 lg:opacity-100;
+    @apply absolute -z-1 top-2 lg:top-[1vh] right-[3vh] lg:right-[6vh] text-[186px] lg:text-[23vh] leading-none uppercase font-adonis font-extralight text-white/5 opacity-0 lg:opacity-100;
   }
 
   .team-card:is(.is-open) .team-card-letter {
@@ -169,15 +173,31 @@
   }
 
   .team-card:hover .team-card-bg {
-    @apply lg:min-h-[200%] lg:opacity-100 lg:z-10;
+    @apply lg:min-h-[200%] lg:opacity-100 lg:z-2;
   }
 
   .team-card:hover .team-card-inner {
-    @apply lg:translate-y-24 2xl:translate-y-[14.2vh] lg:z-20;
+    @apply lg:translate-y-24 2xl:translate-y-[14.2vh] lg:z-3;
   }
 
   .team-card:hover .team-card-body {
     @apply lg:max-h-[125%] lg:opacity-100 lg:overflow-y-auto lg:no-scrollbar;
+  }
+
+  .india-team-card-grid > div:nth-last-child(1) .team-card:hover .team-card-bg,
+  .india-team-card-grid > div:nth-last-child(2) .team-card:hover .team-card-bg {
+    @apply lg:-top-full;
+  }
+
+  .india-team-card-grid
+    > div:nth-last-child(1)
+    .team-card:hover
+    .team-card-inner,
+  .india-team-card-grid
+    > div:nth-last-child(2)
+    .team-card:hover
+    .team-card-inner {
+    @apply lg:-translate-y-[65%] 2xl:-translate-y-[60%];
   }
 }
 
