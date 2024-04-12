@@ -30,13 +30,13 @@
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="site-header">
+    <header class="site-header sticky top-0">
       <div class="site-width">
-        <div class="site-header-inner border-b border-b-white">
-          <div class="flex items-center justify-between pt-12 pb-6 lg:py-8">
+        <div class="site-header-inner border-b-[0.3px] border-b-white/60">
+          <div class="flex items-center justify-between pt-11 pb-6 lg:py-8">
             <a class="site-logo" href="/">
               <img
-                class="w-52 h-4 lg:w-[26vh] lg:h-[2vh]"
+                class="w-52 h-4 lg:w-auto lg:h-[1.4vw]"
                 src="assets/images/logo.svg"
                 alt="Logo"
               />
@@ -44,7 +44,7 @@
             </a>
             <button
               id="menu-toggle"
-              class="p-0 m-0 w-12 lg:w-24 h-8 lg:h-14 stroke-secondarylight hover:stroke-white"
+              class="p-0 m-0 w-12 lg:w-20 h-8 lg:h-11 stroke-secondarylight hover:stroke-white"
               aria-label="Menu toggle"
             >
               <svg
@@ -76,7 +76,7 @@
       <!-- Menu -->
       <nav
         id="primary-nav"
-        class="primary-nav bg-primary text-white fixed inset-0 w-full h-full z-20 lg:!pt-0 transition-transform duration-700 ease-in-out"
+        class="primary-nav bg-primary text-white fixed inset-0 w-full h-full z-20 lg:!pt-0 transition-transform duration-[400ms] lg:duration-700 ease-in-out"
       >
         <div
           class="h-full flex flex-col lg:flex-row gap-5 lg:items-end pt-14 lg:pt-0"
@@ -91,20 +91,23 @@
             />
           </div>
           <div
-            class="lg:w-3/5 h-full flex flex-col lg:mt-auto lg:justify-end border-l border-l-white/15"
+            class="lg:w-3/5 h-full flex flex-col lg:mt-auto lg:justify-end lg:border-l lg:border-l-white/15"
           >
-            <ul
-              class="primary-nav-list [&_li_a]:text-4.7xl lg:[&_li_a]:text-6.2xl font-adonis [&_li]:px-8 [&_li]:py-5 lg:[&_li]:px-12 lg:[&_li]:py-8 [&_li]:border-t [&_li]:border-t-white/15 hover:[&_li_a]:text-secondarydark"
-            >
+            <ul class="primary-nav-list font-adonis">
               <li>
                 <a
+                  class="delay-200"
                   href="https://investors-guildcap.account.box.com/login"
                   target="_blank"
                   >Investor Login</a
                 >
               </li>
-              <li><a href="#playbook">Playbook</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a class="delay-300" href="#playbook">Playbook</a>
+              </li>
+              <li>
+                <a class="delay-500" href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -114,14 +117,14 @@
     <main id="main">
       <!-- Section 1 : Banner -->
       <section
-        class="site-width pt-14 pb-10 xl:pt-20 xl:pb-16 border-b-[0.3px] border-b-white"
+        class="site-width pt-14 pb-10 xl:pt-20 xl:pb-16 border-b-[0.3px] border-b-white/60"
       >
         <div>
           <h1 class="max-[420px]:w-full w-3/4 xl:w-3/5">
             We invest in early-stage consumer businesses in the US, UK and
             India.
           </h1>
-          <p class="w-[93%] text-xl/8 lg:text-2.5xl pt-7 xl:pt-16">
+          <p class="w-[93%] text-xl/8 lg:text-2.5xl pt-7 xl:pt-12">
             <strong class="text-white">Consumer products:</strong> We invest in
             early-stage consumer businesses. <strong class="text-white"
               >Seed investors:</strong
@@ -140,7 +143,7 @@
       <!-- Section 2 : About us-->
       <section class="site-width pt-14 pb-10 lg:pt-12 lg:pb-14">
         <div class="flex flex-col lg:flex-row w-full">
-          <div class="relative lg:w-1/2 pb-28 lg:pb-0">
+          <div class="relative lg:w-1/2 pb-16 lg:pb-0 -z-1">
             <div class="absolute -top-3 -right-5 lg:-right-2">
               <svg
                 class="w-3/4 ml-auto lg:w-full h-3/4 lg:h-full"
@@ -267,7 +270,7 @@
           <div class="lg:w-1/2">
             <div class="flex flex-col gap-9">
               <div>
-                <h3 class="mb-3 lg:mb-1">Management</h3>
+                <h3 class="mb-3 lg:mb-2 lg:text-5.5xl">Management</h3>
                 <p class="text-lg/7">
                   We love working with founders who have a strong thesis on
                   what, why, and how their companies are trying to execute, yet
@@ -278,7 +281,7 @@
               </div>
 
               <div>
-                <h3 class="mb-3 lg:mb-1">Model</h3>
+                <h3 class="mb-3 lg:mb-2 lg:text-5.5xl">Model</h3>
                 <p class="text-lg/7">
                   We prioritize business models that can rapidly scale in a
                   capital efficient manner and win with data over code. We
@@ -289,7 +292,7 @@
               </div>
 
               <div>
-                <h3 class="mb-3 lg:mb-1">Market</h3>
+                <h3 class="mb-3 lg:mb-2 lg:text-5.5xl">Market</h3>
                 <p class="text-lg/7">
                   We believe in businesses bringing industry leading solutions
                   to large addressable markets In general, we prefer markets
@@ -300,7 +303,7 @@
               </div>
 
               <div>
-                <h3 class="mb-3 lg:mb-1">Momentum</h3>
+                <h3 class="mb-3 lg:mb-2 lg:text-5.5xl">Momentum</h3>
                 <p class="text-lg/7">
                   We are excited by businesses with demonstrated revenue and
                   high sequential growth For companies yet to generate revenue,
@@ -316,10 +319,10 @@
       <!-- Section 3 : Playbook -->
       <section
         id="playbook"
-        class="site-width lg:px-0 border-y-[0.3px] border-y-white"
+        class="site-width lg:px-0 border-y-[0.3px] border-y-white/60"
       >
         <div
-          class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 xl:grid-rows-1 auto-rows-min"
+          class="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 xl:grid-rows-1 auto-rows-min py-5 lg:py-0"
         >
           <div
             class="lg:col-span-5 xl:row-auto xl:col-auto py-7 lg:px-11 lg:py-20 xl:py-24"
@@ -331,7 +334,7 @@
           </div>
 
           <div
-            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 xl:border-l-[0.3px] border-white"
+            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 xl:border-l-[0.3px] border-white/60"
           >
             <div>
               <h3 class="text-3.5xl/9 lg:text-3.2xl/10 pb-14 lg:min-h-44">
@@ -346,7 +349,7 @@
           </div>
 
           <div
-            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white"
+            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white/60"
           >
             <div>
               <h3 class="text-3.5xl/9 lg:text-3.2xl/10 pb-14 lg:min-h-44">
@@ -360,7 +363,7 @@
           </div>
 
           <div
-            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white"
+            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white/60"
           >
             <div>
               <h3 class="text-3.5xl/9 lg:text-3.2xl/10 pb-14 lg:min-h-44">
@@ -375,7 +378,7 @@
           </div>
 
           <div
-            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white"
+            class="lg:row-start-2 xl:row-auto py-7 lg:px-6 lg:py-24 border-t-[0.3px] xl:border-t-0 lg:border-l-[0.3px] border-white/60"
           >
             <div>
               <h3 class="text-3.5xl/9 lg:text-3.2xl/10 pb-14 lg:min-h-44">
@@ -394,7 +397,7 @@
       <!-- Section 4 : Teams-->
       <section class="lg:mt-16 lg:px-0">
         <div
-          class="us-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-t-0 lg:border-y-[0.3px] border-y-white"
+          class="us-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-t-0 lg:border-y-[0.3px] border-y-white/60"
         >
           <div
             class="lg:col-span-5 xl:row-span-3 xl:col-auto py-12 lg:pl-11 lg:pr-8 lg:py-20 xl:py-24"
@@ -436,7 +439,7 @@
                     Chairman and Founding Partner, Miami
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before founding Guild Capital in 2009, Iain was a venture
@@ -488,7 +491,7 @@
                     Chief Operating Officer and Partner, Los Angeles
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before joining Guild, Max held various leadership
@@ -544,7 +547,7 @@
                     Chief Financial Officer and Partner, Los Angeles
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before joining Guild, Harrison was a project leader at
@@ -602,7 +605,7 @@
                     Vice President, Los Angeles
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Eric has over 10 years of experience in corporate finance,
@@ -656,7 +659,7 @@
                     Head of People & Talent, Los Angeles
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before joining Guild, Alex was a member of the Financial
@@ -712,7 +715,7 @@
                     Chief of Staff to Founding Partner, New York
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before joining Guild, Ben spent 3 years as a management
@@ -736,7 +739,7 @@
         </div>
 
         <div
-          class="india-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-y-[0.3px] lg:border-t-0 border-white"
+          class="india-team-card-grid team-card-grid lg:grid lg:grid-cols-2 xl:grid-cols-5 xl:grid-rows-3 px-4 lg:px-0 pb-12 lg:pb-0 border-y-[0.3px] lg:border-t-0 border-white/60"
         >
           <div
             class="lg:col-span-5 xl:row-span-3 xl:col-auto py-12 lg:pl-11 lg:pr-8 lg:py-20 xl:py-24"
@@ -778,7 +781,7 @@
                     Partner and Head of India, Mumbai
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Apoorv has an extensive background in management
@@ -832,7 +835,7 @@
                     Senior Vice President, Pune
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Before joining Guild in 2017, Nikhil worked with McKinsey
@@ -888,7 +891,7 @@
                     Senior Vice President, Mumbai
                   </p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Ram joined Guild Capital in 2023. Prior to that, he worked
@@ -941,7 +944,7 @@
 
                   <p class="team-card-designation">Vice President, Mumbai</p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
@@ -993,7 +996,7 @@
 
                   <p class="team-card-designation">Vice President, Mumbai</p>
                 </div>
-                <div class="team-card-body text-base lg:text-xl/8">
+                <div class="team-card-body">
                   <div class="team-card-body-text">
                     <p>
                       Chirag joined Guild Capital in 2023. He has ~10 years of
@@ -1028,7 +1031,7 @@
     <footer id="contact" class="site-footer relative overflow-hidden">
       <div class="site-width relative z-1 lg:px-20 py-16 xl:pt-28 xl:pb-40">
         <div class="mb-12 lg:-mb-10 xl:-mb-12 text-center">
-          <div class="h1 mb-9 lg:mb-12">Contact Us</div>
+          <div class="h1 mb-12">Contact Us</div>
           <div class="flex gap-2 items-end justify-center">
             <svg
               class="w-7 h-7 lg:w-8 lg:h-8 fill-secondarydark"
@@ -1063,7 +1066,7 @@
 
         <div class="flex flex-row justify-center lg:justify-between gap-16">
           <ul
-            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarydark/60 [&_li]:text-center lg:[&_li]:text-left"
+            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarylight/60 [&_li]:text-center lg:[&_li]:text-left opacity-60"
           >
             <li>Los Angeles</li>
             <li>New York</li>
@@ -1071,7 +1074,7 @@
           </ul>
 
           <ul
-            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarydark/60 [&_li]:text-center lg:[&_li]:text-left"
+            class="flex flex-col gap-6 lg:gap-4 text-lg font-medium uppercase text-secondarylight/60 [&_li]:text-center lg:[&_li]:text-left opacity-60"
           >
             <li>London</li>
             <li>Mumbai</li>
@@ -1080,7 +1083,7 @@
         </div>
       </div>
       <div
-        class="site-width relative z-10 lg:px-20 text-white/50 py-8 xl:py-16 border-t-[0.3px] border-t-white"
+        class="site-width relative z-10 lg:px-20 text-white/50 py-8 xl:py-16 border-t-[0.3px] border-t-white/60"
       >
         <div
           class="flex flex-col lg:flex-row gap-3 items-center justify-between"
@@ -1094,7 +1097,7 @@
           </div>
           <a href="/" class="site-logo mb-5 lg:mb-0 order-first lg:order-none">
             <img
-              class="w-auto h-6 lg:h-8"
+              class="w-auto h-6"
               src="assets/images/logo.svg"
               alt="Logo"
               width="210"

@@ -45,6 +45,11 @@
   a:hover {
     @apply text-white;
   }
+
+  a,
+  button {
+    @apply outline-none;
+  }
 }
 
 @layer components {
@@ -57,7 +62,7 @@
   }
 
   .heading-subtext {
-    @apply font-archivo font-normal text-0.5xl mb-7 text-secondary uppercase;
+    @apply font-archivo font-normal text-0.5xl mb-7 text-lightviolet uppercase;
   }
 
   .site-header:is(.sticky-header) {
@@ -74,6 +79,14 @@
 
   .menu-toggle svg {
     @apply transition-all duration-700 ease-in-out;
+  }
+
+  .primary-nav-list li {
+    @apply px-8 py-5 lg:px-12 lg:py-8 border-t border-t-white/15;
+  }
+
+  .primary-nav-list li a {
+    @apply inline-block text-4.7xl lg:text-6.2xl hover:text-secondarydark duration-700 translate-y-24 opacity-0 transition-all;
   }
 
   body:is(.body-menu-open) {
@@ -100,9 +113,14 @@
     @apply translate-y-0;
   }
 
+  body:is(.body-menu-open) .primary-nav-list li a {
+    opacity: 1;
+    transform: none;
+  }
+
   /* Team card */
   .team-card {
-    @apply lg:min-h-72 2xl:min-h-[36.5vh] border-[0.3px] lg:border-r-0 xl:border-l-[0.3px] lg:border-b-[0.3px] border-white;
+    @apply lg:min-h-72 2xl:min-h-[36.5vh] border-[0.3px] lg:border-r-0 xl:border-l-[0.3px] lg:border-b-[0.3px] border-white/60;
   }
 
   .team-card-grid > div:nth-child(2) .team-card,
@@ -124,11 +142,11 @@
   }
 
   .team-card-designation {
-    @apply text-lg lg:text-xl mt-4 lg:mt-2;
+    @apply text-white text-lg lg:text-xl mt-4 lg:mt-2;
   }
 
   .team-card-bg {
-    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-primary lg:absolute lg:inset-0 lg:transition-colors lg:ease-in-out lg:duration-500;
+    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-primary lg:absolute lg:inset-0 lg:transition-colors lg:ease-in-out lg:duration-700;
   }
 
   .team-card-icon {
@@ -136,7 +154,7 @@
   }
 
   .team-card-body {
-    @apply lg:opacity-0 lg:max-h-0 overflow-hidden transition-all lg:ease-linear duration-300;
+    @apply text-base lg:text-lg xl:-mt-1 lg:opacity-0 lg:max-h-0 overflow-hidden transition-all lg:ease-in-out duration-300;
   }
 
   .team-card:not(.is-open) .team-card-body {

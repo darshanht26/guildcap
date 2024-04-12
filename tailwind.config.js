@@ -8,6 +8,7 @@ module.exports = {
         secondary: "#8E71BF",
         secondarydark: '#9F90B6',
         secondarylight: '#C7CDFF',
+        lightviolet: '#B593EE',
         darkgray: '#A8A8A8',
       },
       fontFamily: {

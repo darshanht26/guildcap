@@ -17,7 +17,7 @@ const primaryNav = document.querySelector('#primary-nav');
 function menuFn() {
   if (document.body.classList.contains('body-menu-open')) {
     document.body.classList.remove('body-menu-open')
-    primaryNav.style.paddingTop = null
+    primaryNav.style.paddingTop = null;
   } else {
     document.body.classList.add('body-menu-open')
     primaryNav.style.paddingTop = `${siteHeader.offsetHeight}px`
