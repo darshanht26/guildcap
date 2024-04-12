@@ -86,7 +86,7 @@
   }
 
   .primary-nav-list li a {
-    @apply inline-block text-4.7xl lg:text-6.2xl hover:text-secondarydark duration-700 translate-y-24 opacity-0 transition-all;
+    @apply inline-block text-4xl xs:text-4.5xl md:text-4.7xl lg:text-6.2xl hover:text-secondarydark duration-700 translate-y-24 opacity-0 transition-all;
   }
 
   body:is(.body-menu-open) {
