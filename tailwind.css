@@ -156,7 +156,7 @@
   }
 
   .team-card-inner {
-    @apply px-5 py-8 lg:px-7 lg:pb-8 lg:pt-0 lg:absolute lg:inset-0 w-full lg:translate-y-44 2xl:translate-y-[23.1vh] lg:transition-transform lg:ease-in-out lg:duration-500;
+    @apply px-5 py-8 lg:px-[2vw] lg:pb-[2.5vw] lg:pt-0 lg:absolute lg:inset-0 w-full lg:translate-y-44 2xl:translate-y-[23.1vh] lg:transition-transform lg:ease-in-out lg:duration-500;
   }
 
   .team-card-letter {
