@@ -8,11 +8,11 @@ module.exports = {
         xs: "385px",
       },
       colors: {
-        primary: "#22143A",
-        secondary: "#8E71BF",
-        secondarydark: '#9F90B6',
-        secondarylight: '#C7CDFF',
-        lightviolet: '#B593EE',
+        darkpurple: "#22143A",
+        middlebluepurple: "#8E71BF",
+        glossygrape: '#9F90B6',
+        lavenderblue: '#C7CDFF',
+        brightlavender: '#B593EE',
         darkgray: '#A8A8A8',
       },
       fontFamily: {

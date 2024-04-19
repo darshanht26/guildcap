@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-primary text-darkgray font-archivo font-extralight;
+    @apply bg-darkpurple text-darkgray font-archivo font-extralight;
   }
 
   h1,
@@ -58,15 +58,15 @@
   }
 
   .heading {
-    @apply font-archivo font-normal text-3.2xl text-secondary uppercase;
+    @apply font-archivo font-normal text-3.2xl text-middlebluepurple uppercase;
   }
 
   .heading-subtext {
-    @apply font-archivo font-normal text-0.5xl mb-7 text-lightviolet uppercase;
+    @apply font-archivo font-normal text-0.5xl mb-7 text-brightlavender uppercase;
   }
 
   .site-header:is(.sticky-header) {
-    @apply bg-primary fixed top-0 left-0 right-0 z-20;
+    @apply bg-darkpurple fixed top-0 left-0 right-0 z-20;
   }
 
   .site-header:is(.sticky-header) .site-header-inner {
@@ -81,12 +81,12 @@
     @apply transition-all duration-700 ease-in-out;
   }
 
-  .primary-nav-list li {
+  .darkpurple-nav-list li {
     @apply px-8 py-5 lg:px-12 lg:py-8 border-t border-t-white/15;
   }
 
-  .primary-nav-list li a {
-    @apply inline-block text-4xl xs:text-4.5xl md:text-4.7xl lg:text-6.2xl hover:text-secondarydark duration-700 translate-y-24 opacity-0 transition-all;
+  .darkpurple-nav-list li a {
+    @apply inline-block text-4xl xs:text-4.5xl md:text-4.7xl lg:text-6.2xl hover:text-glossygrape duration-700 translate-y-24 opacity-0 transition-all;
   }
 
   body:is(.body-menu-open) {
@@ -105,15 +105,15 @@
     @apply block;
   }
 
-  body:not(.body-menu-open) .primary-nav {
+  body:not(.body-menu-open) .darkpurple-nav {
     @apply -translate-y-full;
   }
 
-  body:is(.body-menu-open) .primary-nav {
+  body:is(.body-menu-open) .darkpurple-nav {
     @apply translate-y-0;
   }
 
-  body:is(.body-menu-open) .primary-nav-list li a {
+  body:is(.body-menu-open) .darkpurple-nav-list li a {
     opacity: 1;
     transform: none;
   }
@@ -146,7 +146,7 @@
   }
 
   .team-card-bg {
-    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-primary lg:absolute lg:inset-0 lg:transition-colors lg:ease-in-out lg:duration-700;
+    @apply hidden lg:block lg:w-full lg:min-h-[100%] lg:opacity-0 lg:bg-darkpurple lg:absolute lg:inset-0 lg:transition-colors lg:ease-in-out lg:duration-700;
   }
 
   .team-card-icon {
