@@ -54,6 +54,10 @@
   button {
     @apply outline-none;
   }
+
+  :target {
+    @apply scroll-mt-28 lg:scroll-mt-32;
+  }
 }
 
 @layer components {
