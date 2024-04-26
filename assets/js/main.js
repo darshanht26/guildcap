@@ -1,3 +1,5 @@
+
+
 // sticky header
 const siteHeader = document.querySelector(".site-header");
 function stickyOnScroll() {
@@ -31,15 +33,23 @@ const navLinks = document.querySelectorAll('.primary-nav-list a');
 navLinks.forEach(navLink => {
   navLink.addEventListener('click', (e) => {
     menuFn()
-    if (e.currentTarget.hash) {
-      e.preventDefault();
-      const hrefValue = navLink.getAttribute('href');
-      const targetElement = document.getElementById(hrefValue.slice(1));
-      if (!targetElement) return;
-      window.scrollTo({ top: targetElement.offsetTop - siteHeader.offsetHeight, behavior: 'smooth' });
-    }
   })
 })
+
+// hash jump to section
+if (window.location.hash) {
+  const targetElement = document.getElementById(window.location.hash.slice(1));
+  targetElement.style.scrollMarginTop = `${siteHeader.offsetHeight}px`
+}
+
+const linksWithHash = document.querySelectorAll('a[href^="#"]');
+linksWithHash.forEach(linkWithHash => {
+  linkWithHash.addEventListener('click', (e) => {
+    const hrefValue = e.currentTarget.getAttribute('href');;
+    const targetElement = document.getElementById(hrefValue.slice(1));
+    targetElement.style.scrollMarginTop = `${siteHeader.offsetHeight}px`
+  })
+});
 
 // accordion function
 function accordionFn() {

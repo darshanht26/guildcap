@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-darkpurple text-darkgray font-archivo font-extralight;
   }
@@ -81,11 +85,11 @@
     @apply transition-all duration-700 ease-in-out;
   }
 
-  .darkpurple-nav-list li {
+  .primary-nav-list li {
     @apply px-8 py-5 lg:px-12 lg:py-8 border-t border-t-white/15;
   }
 
-  .darkpurple-nav-list li a {
+  .primary-nav-list li a {
     @apply inline-block text-4xl xs:text-4.5xl md:text-4.7xl lg:text-6.2xl hover:text-glossygrape duration-700 translate-y-24 opacity-0 transition-all;
   }
 
@@ -105,15 +109,15 @@
     @apply block;
   }
 
-  body:not(.body-menu-open) .darkpurple-nav {
+  body:not(.body-menu-open) .primary-nav {
     @apply -translate-y-full;
   }
 
-  body:is(.body-menu-open) .darkpurple-nav {
+  body:is(.body-menu-open) .primary-nav {
     @apply translate-y-0;
   }
 
-  body:is(.body-menu-open) .darkpurple-nav-list li a {
+  body:is(.body-menu-open) .primary-nav-list li a {
     opacity: 1;
     transform: none;
   }
@@ -207,15 +211,63 @@
     @apply lg:-top-full;
   }
 
-  .india-team-card-grid
-    > div:nth-last-child(1)
-    .team-card:hover
-    .team-card-inner,
-  .india-team-card-grid
-    > div:nth-last-child(2)
-    .team-card:hover
-    .team-card-inner {
+  .india-team-card-grid > div:nth-last-child(1) .team-card:hover .team-card-inner,
+  .india-team-card-grid > div:nth-last-child(2) .team-card:hover .team-card-inner {
     @apply lg:-translate-y-[65%] 2xl:-translate-y-[60%];
+  }
+
+  .privacy-policy-section a {
+    @apply underline underline-offset-2 text-white/80;
+  }
+
+  .privacy-policy-section i {
+    @apply font-medium;
+  }
+
+  .privacy-policy-section strong {
+    font-weight: 700;
+  }
+
+  .privacy-policy-section h2 {
+    @apply mt-12 mb-7 lg:mt-14 text-2.5xl lg:text-3.2xl capitalize;
+  }
+
+  .privacy-policy-section h3 {
+    @apply mt-10 mb-6 text-2xl;
+  }
+
+  .privacy-policy-section p,
+  .privacy-policy-section ul {
+    @apply my-5 text-lg;
+  }
+
+  .privacy-policy-section ul {
+    @apply list-square pl-8;
+  }
+
+  .privacy-policy-section ul li {
+    @apply mb-1;
+  }
+
+  .table-of-content {
+    @apply !list-none !pl-0 grid grid-cols-2 gap-x-12 !-mt-4;
+  }
+
+  .table-of-content li {
+    @apply !mb-0 py-5 border-b border-b-white/15;
+  }
+
+  table thead th,
+  table tbody td {
+    @apply px-2.5 py-5 lg:px-7 border border-white/50 align-top lg:align-middle;
+  }
+
+  table thead th {
+    @apply text-lg lg:text-2xl text-left font-adonis text-white font-normal;
+  }
+
+  table tbody td {
+    @apply text-base lg:text-lg;
   }
 }
 
