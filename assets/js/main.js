@@ -36,23 +36,28 @@ navLinks.forEach(navLink => {
   })
 })
 
-// const scrollMarginTop = `${(siteHeader.offsetHeight + 20)}px`;
+const scrollMarginTop = `${(siteHeader.offsetHeight + 20)}px`;
 
-// // hash jump to section
-// if (window.location.hash) {
-//   console.log(window.location.hash)
-//   const targetElement = document.getElementById(window.location.hash.slice(1));
-//   targetElement.style.scrollMarginTop = scrollMarginTop
-// }
+// hash jump to section
 
-// const linksWithHash = document.querySelectorAll('a[href^="#"]');
-// linksWithHash.forEach(linkWithHash => {
-//   linkWithHash.addEventListener('click', (e) => {
-//     const hrefValue = e.currentTarget.getAttribute('href');;
-//     const targetElement = document.getElementById(hrefValue.slice(1));
-//     targetElement.style.scrollMarginTop = scrollMarginTop
-//   })
-// });
+document.addEventListener("DOMContentLoaded", (event) => {
+  console.log("DOM fully loaded and parsed");
+  if (window.location.hash != '') {
+    console.log(window.location.hash)
+    const targetElement = document.getElementById(window.location.hash.slice(1));
+    targetElement.style.scrollMarginTop = scrollMarginTop
+  }
+});
+
+
+const linksWithHash = document.querySelectorAll('a[href^="#"]');
+linksWithHash.forEach(linkWithHash => {
+  linkWithHash.addEventListener('click', (e) => {
+    const hrefValue = e.currentTarget.getAttribute('href');;
+    const targetElement = document.getElementById(hrefValue.slice(1));
+    targetElement.style.scrollMarginTop = scrollMarginTop
+  })
+});
 
 // accordion function
 function accordionFn() {
