@@ -36,10 +36,12 @@ navLinks.forEach(navLink => {
   })
 })
 
+const scrollMarginTop = `${(siteHeader.offsetHeight + 20)}px`;
+
 // hash jump to section
 if (window.location.hash) {
   const targetElement = document.getElementById(window.location.hash.slice(1));
-  targetElement.style.scrollMarginTop = `${siteHeader.offsetHeight}px`
+  targetElement.style.scrollMarginTop = scrollMarginTop
 }
 
 const linksWithHash = document.querySelectorAll('a[href^="#"]');
@@ -47,7 +49,7 @@ linksWithHash.forEach(linkWithHash => {
   linkWithHash.addEventListener('click', (e) => {
     const hrefValue = e.currentTarget.getAttribute('href');;
     const targetElement = document.getElementById(hrefValue.slice(1));
-    targetElement.style.scrollMarginTop = `${siteHeader.offsetHeight}px`
+    targetElement.style.scrollMarginTop = scrollMarginTop
   })
 });
 

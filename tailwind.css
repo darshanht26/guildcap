@@ -122,6 +122,10 @@
     transform: none;
   }
 
+  .site-footer {
+    @apply border-t-[0.3px] border-white/60;
+  }
+
   /* Team card */
   .team-card {
     @apply lg:min-h-72 2xl:min-h-[36.5vh] border-[0.3px] lg:border-r-0 xl:border-l-[0.3px] lg:border-b-[0.3px] border-white/60;
@@ -217,7 +221,7 @@
   }
 
   .privacy-policy-section a {
-    @apply underline underline-offset-2 text-white/80;
+    @apply underline underline-offset-2 text-white/80 hover:text-glossygrape;
   }
 
   .privacy-policy-section i {
@@ -233,7 +237,7 @@
   }
 
   .privacy-policy-section h3 {
-    @apply mt-10 mb-6 text-2xl;
+    @apply mt-7 lg:mt-10 mb-5 lg:mb-6 text-xl lg:text-2xl;
   }
 
   .privacy-policy-section p,
@@ -242,19 +246,19 @@
   }
 
   .privacy-policy-section ul {
-    @apply list-square pl-8;
+    @apply list-square pl-6 lg:pl-8;
   }
 
-  .privacy-policy-section ul li {
-    @apply mb-1;
+  .privacy-policy-section ul li + li {
+    @apply mt-1;
   }
 
   .table-of-content {
-    @apply !list-none !pl-0 grid grid-cols-2 gap-x-12 !-mt-4;
+    @apply !list-none !pl-0 grid grid-cols-1 lg:grid-cols-2 gap-x-12 !-mt-4;
   }
 
   .table-of-content li {
-    @apply !mb-0 py-5 border-b border-b-white/15;
+    @apply !mb-0 py-4 lg:py-5 border-b border-b-white/15;
   }
 
   table thead th,
